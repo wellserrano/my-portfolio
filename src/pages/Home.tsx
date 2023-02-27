@@ -7,8 +7,8 @@ export function Home() {
       <header className="flex flex-col justify-start items-center">
         <DarkModeToggle />
         <Avatar />
-        <h1>Wellington G. Andrade Serrano</h1>
-        <p>Software Developer</p>
+        <h1 className="text-[#F1F2F4] text-3xl">Wellington Serrano</h1>
+        <p className="text-[#A3ABB2] text-lg">Software Developer</p>
         <p>iiiicccccooooonnnnnneeeesss</p>
       </header>
     </div>
