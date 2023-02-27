@@ -1,14 +1,16 @@
 import { Avatar } from "../components/Avatar"
-import { DarkModeToggle } from "../components/DarkModeToggle"
+import { Button } from "../components/Button"
 import { TextBox } from "../components/TextBox"
+import { DarkModeToggle } from "../components/DarkModeToggle"
 
-import linkedinLogo from '../assets/linkedin.svg'
 import githubLogo from '../assets/github.svg'
+import linkedinLogo from '../assets/linkedin.svg'
 
 export function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10">
-      <header className="flex flex-col justify-start items-center">
+
+      <header className="flex flex-col justify-start items-center mb-10">
         <DarkModeToggle />
         <Avatar />
         <h1 className="text-[#F1F2F4] text-2xl">Wellington Serrano</h1>
@@ -23,7 +25,13 @@ export function Home() {
           <TextBox amount='2' subject='Currently developing' />
         </div>
       </header>
-      
+
+      <main>
+        <div className="flex justify-center items-center gap-3">
+          <Button title='Check CV' />
+          <Button title='Contact Me'/>
+        </div>
+      </main>
     </div>
   )
 }
