@@ -1,4 +1,7 @@
+import React from 'react'
+
 import { Avatar } from "../components/Avatar"
+import { Toggle } from "../components/Toggle"
 import { Button } from "../components/Button"
 import { TextBox } from "../components/TextBox"
 import { DarkModeToggle } from "../components/DarkModeToggle"
@@ -27,10 +30,17 @@ export function Home() {
       </header>
 
       <main>
-        <div className="flex justify-center items-center gap-3">
-          <Button title='Check CV' />
+        <div className="flex justify-center items-center gap-3 mb-12">
+          <Button title='Check my CV' />
           <Button title='Contact Me'/>
         </div>
+
+        <div className='flex justify-center items-center mb-8'>
+          <Toggle />
+        </div>
+
+        
+
       </main>
     </div>
   )
