@@ -4,6 +4,7 @@ import { Avatar } from "../components/Avatar"
 import { Toggle } from "../components/Toggle"
 import { Button } from "../components/Button"
 import { TextBox } from "../components/TextBox"
+import { ProjectCard } from "../components/ProjectCard"
 import { DarkModeToggle } from "../components/DarkModeToggle"
 
 import githubLogo from '../assets/github.svg'
@@ -39,7 +40,9 @@ export function Home() {
           <Toggle />
         </div>
 
-        
+        <div className='flex justify-center items-center'>
+          <ProjectCard />
+        </div>
 
       </main>
     </div>
