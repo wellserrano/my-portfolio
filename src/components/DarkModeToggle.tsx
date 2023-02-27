@@ -8,7 +8,8 @@ export function DarkModeToggle() {
   return (
     <Toggle.Root 
       className='flex justify-center items-center 
-      w-12 h-12 bg-[#171F26] rounded-full'
+      w-12 h-12 mb-8
+      bg-[#171F26] rounded-full'
       onClick={() => setDarkMode(!darkMode)}
     >
       {
