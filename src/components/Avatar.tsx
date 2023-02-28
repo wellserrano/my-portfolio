@@ -3,7 +3,7 @@ import * as AvatarReact from '@radix-ui/react-avatar';
 
 export function Avatar() {
   return (
-    <AvatarReact.Root className="w-32 h-32 rounded-full border-4 border-[#FFE071] p-1 mb-10">
+    <AvatarReact.Root className="flex justify-center items-center w-32 h-32 sm:w-52 sm:h-52 rounded-full border-4 border-[#FFE071] p-1">
        <AvatarReact.Image
         className="h-full w-full rounded-[inherit] object-cover"
         src={ avatarPicture }
