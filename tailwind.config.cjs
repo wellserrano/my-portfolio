@@ -14,6 +14,7 @@ module.exports = {
         'slideUp': 'slideUp 300ms ease-out',
         'popOut': 'popOut 300ms ease-out',
         'popIn': 'popIn 300ms ease-out',
+        'smallEnhance': 'smallEnhance 300ms ease-out forwards',
       },
       keyframes: {
         slideDown: {
@@ -32,6 +33,10 @@ module.exports = {
           '0%': {background: '#0C151D'},
           '100%': {background: '#171F26'},
         },
+        smallEnhance: {
+          '0%': {transform: 'scale(0)'},
+          '100%': {transform: 'scale(1)'},
+        }
       }
     },
   },

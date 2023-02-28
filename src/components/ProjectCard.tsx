@@ -21,7 +21,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
 
   return (
     <Collapsible.Root
-      className="w-72 overflow-hidden rounded-md shadow-[0_2px_10px]"
+      className="w-72 overflow-hidden rounded-md shadow-[0_2px_10px] hover:scale-105 transition-transform"
       open={ open }
       onOpenChange={ setOpen }
     >
