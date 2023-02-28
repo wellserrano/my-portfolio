@@ -10,7 +10,7 @@ export function Avatar() {
         alt="my profile picture"
       />
       <AvatarReact.Fallback
-        className="text-violet11 leading-1 flex h-full w-full rounded-[inherit] items-center justify-center bg-[#FFE071] text-[15px] font-medium"
+        className="text-violet11 leading-1 flex h-full w-full rounded-[inherit] items-center justify-center bg-[#FFE071] text-base font-medium"
         delayMs={600}
       >
         WS

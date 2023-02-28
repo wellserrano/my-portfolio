@@ -5,7 +5,7 @@ export function Toggle() {
     
   return (
     <ToggleGroup.Root
-      className="flex justify-between items-center w-80 h-16 bg-[#171F26] rounded-xl p-2"
+      className="flex justify-between items-center w-72 h-16 bg-[#171F26] rounded-xl p-2"
       type="single"
       defaultValue="portfolio"
     >
