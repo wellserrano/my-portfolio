@@ -17,7 +17,7 @@ interface Props {
 export function ProjectCard({ title, description, image, githubLink, siteLink }: Props) {
   const [open, setOpen] = useState(false);
 
-  const tooltipStyle = 'data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-violet11 select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
+  const tooltipStyle = 'text-[#3D3D3D] select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
 
   return (
     <Collapsible.Root
@@ -29,15 +29,17 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
       <Collapsible.Trigger asChild >
         <AspectRatio.Root ratio={16 / 9}>
           <img
-            className="h-full w-full object-cover opacity-80 hover:opacity-100"
+            className="h-full w-full object-cover blur-sm grayscale-[0.75] hover:grayscale-0 hover:blur-none transition-blur ease-linear"
             src={ image }
             alt="webpage image"
           />
         </AspectRatio.Root>
       </Collapsible.Trigger>
 
-      <Collapsible.Content>
-        <div className='flex flex-col items-start p-2 gap-1'>
+      <Collapsible.Content 
+        className='overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp'
+      >
+        <div className='flex flex-col items-start px-4 pt-2 gap-2'>
           <h2 className='text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
           <p className='text-[#A3ABB2] text-sm'>{ description }</p>
         </div>
