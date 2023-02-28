@@ -15,8 +15,8 @@ export function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5] transition-colors ease-out">
+      
       <ThemeToggle />
-      {/* flex flex-col sm:flex-row justify-start items-center mb-10 */}
 
       <header>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:gap-10">
