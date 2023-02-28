@@ -10,7 +10,10 @@ import { DarkModeToggle } from "../components/DarkModeToggle"
 import githubLogo from '../assets/github.svg'
 import linkedinLogo from '../assets/linkedin.svg'
 
+import dashboardImage from '../assets/projects-images/dashboard.png'
+
 export function Home() {
+
   return (
     <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10">
 
@@ -41,7 +44,13 @@ export function Home() {
         </div>
 
         <div className='flex justify-center items-center'>
-          <ProjectCard />
+          <ProjectCard 
+            title='Dashboard' 
+            description='Simple dashboard design to show data'
+            image={ dashboardImage }
+            githubLink='https://github.com/wellserrano/dashboard'
+            siteLink='https://wellserrano.github.io/dashboard/'
+          />
         </div>
 
       </main>

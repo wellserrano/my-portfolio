@@ -10,14 +10,18 @@ interface Props {
   title: string
   description: string
   image: string
+  githubLink: string
+  siteLink: string
 }
 
-export function ProjectCard({ title, description, image }: Props) {
+export function ProjectCard({ title, description, image, githubLink, siteLink }: Props) {
   const [open, setOpen] = useState(false);
+
+  const tooltipStyle = 'data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-violet11 select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
 
   return (
     <Collapsible.Root
-      className="w-[300px] overflow-hidden rounded-md shadow-[0_2px_10px]"
+      className="w-72 overflow-hidden rounded-md shadow-[0_2px_10px]"
       open={ open }
       onOpenChange={ setOpen }
     >
@@ -33,18 +37,22 @@ export function ProjectCard({ title, description, image }: Props) {
       </Collapsible.Trigger>
 
       <Collapsible.Content>
-        <div className='flex justify-around py-6'>
-          <h2>{ title }</h2>
-          <p>{ description }</p>
+        <div className='flex flex-col items-start p-2 gap-1'>
+          <h2 className='text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
+          <p className='text-[#A3ABB2] text-sm'>{ description }</p>
+        </div>
 
+        <div className='flex justify-around pt-2 pb-4'>
           <Tooltip.Provider delayDuration={800}>
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
-                <Browser size={36} color='#A3ABB2' className='hover:cursor-pointer' />
+                <a href={ siteLink } target='_blank'>
+                  <Browser size={28} color='#A3ABB2' className='hover:cursor-pointer' />
+                </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
                 <Tooltip.Content
-                  className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-violet11 select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
+                  className={ tooltipStyle }
                   sideOffset={5}
                   side='bottom'
                 >
@@ -58,11 +66,13 @@ export function ProjectCard({ title, description, image }: Props) {
           <Tooltip.Provider>
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
-                <GithubLogo size={36} color='#A3ABB2' className='hover:cursor-pointer' />
+                <a href={ githubLink } target='_blank'>
+                  <GithubLogo size={28} color='#A3ABB2' className='hover:cursor-pointer' />
+                </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
                 <Tooltip.Content
-                  className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-violet11 select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
+                  className={ tooltipStyle }
                   sideOffset={5}
                   side='bottom'
                 >
