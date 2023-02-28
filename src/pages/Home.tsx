@@ -14,7 +14,7 @@ import dashboardImage from '../assets/projects-images/dashboard.png'
 export function Home() {
 
   return (
-    <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5]">
+    <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5] transition-colors ease-out">
 
       <header className="flex flex-col justify-start items-center mb-10">
         <ThemeToggle />
