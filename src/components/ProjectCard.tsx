@@ -49,7 +49,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
                 <a href={ siteLink } target='_blank'>
-                  <Browser size={28} color='#A3ABB2' className='hover:cursor-pointer' />
+                  <Browser size={28} color='#A3ABB2' className='hover:cursor-pointer hover:scale-110 transition-transform' />
                 </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
@@ -69,7 +69,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
                 <a href={ githubLink } target='_blank'>
-                  <GithubLogo size={28} color='#A3ABB2' className='hover:cursor-pointer' />
+                  <GithubLogo size={28} color='#A3ABB2' className='hover:cursor-pointer hover:scale-110 transition-transform' />
                 </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
