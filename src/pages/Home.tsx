@@ -54,6 +54,9 @@ export function Home() {
         </div>
 
       </main>
+      <footer className='flex justify-center items-center text-center text-sm text-[#F1F2F4] font-normal mt-8'>
+        <p>Desenvolvido com 💖 e ☕ por Wellington Serrano</p>
+      </footer>
     </div>
   )
 }
