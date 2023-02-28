@@ -40,8 +40,8 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
         className='overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp'
       >
         <div className='flex flex-col items-start px-4 pt-2 gap-2'>
-          <h2 className='text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
-          <p className='text-[#A3ABB2] text-sm'>{ description }</p>
+          <h2 className='text-[#3D3D3D] dark:text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
+          <p className='text-[#575757] dark:text-[#A3ABB2] text-sm'>{ description }</p>
         </div>
 
         <div className='flex justify-around pt-2 pb-4'>
@@ -49,7 +49,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
                 <a href={ siteLink } target='_blank'>
-                  <Browser size={28} color='#A3ABB2' className='hover:cursor-pointer hover:scale-110 transition-transform' />
+                  <Browser size={28} className='hover:cursor-pointer hover:scale-110 transition-transform text-[#575757] dark:text-[#A3ABB2]' />
                 </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
@@ -59,7 +59,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
                   side='bottom'
                 >
                   Visit website
-                  <Tooltip.Arrow className="fill-white" />
+                  <Tooltip.Arrow className="dark:fill-white" />
                 </Tooltip.Content>
               </Tooltip.Portal>
             </Tooltip.Root>
@@ -69,7 +69,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
             <Tooltip.Root>
               <Tooltip.Trigger asChild>
                 <a href={ githubLink } target='_blank'>
-                  <GithubLogo size={28} color='#A3ABB2' className='hover:cursor-pointer hover:scale-110 transition-transform' />
+                  <GithubLogo size={28} className='hover:cursor-pointer hover:scale-110 transition-transform text-[#575757] dark:text-[#A3ABB2]' />
                 </a>
               </Tooltip.Trigger>
               <Tooltip.Portal>
