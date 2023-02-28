@@ -1,4 +1,3 @@
-import * as Toggle from '@radix-ui/react-toggle';
 import { Sun, Moon } from 'phosphor-react'
 import { useState } from 'react';
 
@@ -6,17 +5,20 @@ import { useState } from 'react';
 export function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(true)
   return (
-    <Toggle.Root 
-      className='flex justify-center items-center 
+    <button 
+      type='button'
+      className='
+      relative
+      flex justify-center items-center 
       w-12 h-12 mb-8
-      bg-[#171F26] rounded-full'
+      bg-[#171F26] rounded-full
+      '
       onClick={() => setDarkMode(!darkMode)}
     >
-      {
-        darkMode 
-        ? <Moon size={24} weight="fill" color='#A3ABB2'/>
-        : <Sun size={24} weight="fill" color='#A3ABB2' />
-      }
-    </Toggle.Root>
+      
+      <Moon size={24} weight="fill" color='#A3ABB2' className={`absolute transition-transform duration-500 ${darkMode ? 'scale-100' : 'scale-0'}`}/>
+      <Sun size={24} weight="fill" color='#A3ABB2' className={`absolute transition-transform duration-500 ${darkMode ? 'scale-0' : 'scale-100'}`}/>
+      
+    </button>
   )
 }
