@@ -1,6 +1,4 @@
-import { PrimitiveButtonProps } from "@radix-ui/react-toggle"
-
-interface Props extends PrimitiveButtonProps {
+interface Props extends React.HTMLProps<HTMLButtonElement> {
   title: string
 }
 
