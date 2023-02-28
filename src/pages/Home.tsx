@@ -21,7 +21,7 @@ export function Home() {
       <header>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:gap-10">
           <Avatar />
-          <div className="flex flex-col sm:gap-2">
+          <div className="flex flex-col sm:gap-2 text-center sm:text-left">
             <h1 className="dark:text-[#F1F2F4] text-[#3D3D3D] text-2xl sm:text-5xl">Wellington Serrano</h1>
             <p className="dark:text-[#A3ABB2] text-[#575757] text-lg sm:text-2xl mb-2">Software Developer</p>
             <div className="flex gap-12 justify-center items-center">
@@ -72,7 +72,7 @@ export function Home() {
         </div>
 
       </main>
-      <footer className='flex justify-center items-center text-center text-sm text-[#3D3D3D] dark:text-[#F1F2F4] font-normal mt-8'>
+      <footer className='flex justify-center items-center text-center text-sm sm:text-base text-[#3D3D3D] dark:text-[#F1F2F4] font-normal mt-12'>
         <p>Desenvolvido com 💖 e ☕ por Wellington Serrano</p>
       </footer>
     </div>
