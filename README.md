@@ -16,6 +16,7 @@
 
 ## [](https://github.com/wellserrano/my-portfolio#deployment-)Deployment  📦
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5d48b152-e85b-4e69-9c1a-1a93afa821de/deploy-status)](https://app.netlify.com/sites/wellserrano/deploys)
+
 The project is published on [Netlify](https://www.netlify.com/) and can be visited [here](wellserrano.netlify.com)
 
 ## [](https://github.com/wellserrano/my-portfolio#getting-started) Running locally  🚀
