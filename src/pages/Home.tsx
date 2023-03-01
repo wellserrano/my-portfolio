@@ -69,11 +69,18 @@ export function Home() {
             githubLink='https://github.com/wellserrano/dashboard'
             siteLink='https://wellserrano.github.io/dashboard/'
           />
+          <ProjectCard 
+            title='Dashboard' 
+            description='Simple dashboard design shows specific data'
+            image={ dashboardImage }
+            githubLink='https://github.com/wellserrano/dashboard'
+            siteLink='https://wellserrano.github.io/dashboard/'
+          />
         </div>
 
       </main>
       <footer className='flex justify-center items-center text-center text-sm sm:text-base text-[#3D3D3D] dark:text-[#F1F2F4] font-normal mt-12'>
-        <p>Desenvolvido com 💖 e ☕ por Wellington Serrano</p>
+        <p>Developed with 💖 and ☕ by Me</p>
       </footer>
     </div>
   )
