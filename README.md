@@ -41,7 +41,7 @@ yarn@v1.22.10 or higher
 
 ```
 
-## [](https://github.com/wellserrano/my-portfolio#how-to-use-)How To Use  🔧
+### [](https://github.com/wellserrano/my-portfolio#how-to-use-)**How To Use**  🔧
 
 From your command line, first clone the portfolio:
 
