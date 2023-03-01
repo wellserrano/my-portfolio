@@ -56,25 +56,18 @@ export function Home() {
             siteLink='https://wellserrano.github.io/dashboard/'
           />
           <ProjectCard 
-            title='Dashboard' 
-            description='Simple dashboard design shows specific data'
+            title='Sorobloco' 
+            description='Display street carnival groups in Sorocaba'
             image={ dashboardImage }
-            githubLink='https://github.com/wellserrano/dashboard'
-            siteLink='https://wellserrano.github.io/dashboard/'
+            githubLink='https://github.com/wellserrano/sorobloco'
+            siteLink='https://sorobloco.netlify.app'
           />
           <ProjectCard 
-            title='Dashboard' 
-            description='Simple dashboard design shows specific data'
+            title='RocketMovies' 
+            description='Platform dedicated to organize your favorite movies'
             image={ dashboardImage }
-            githubLink='https://github.com/wellserrano/dashboard'
-            siteLink='https://wellserrano.github.io/dashboard/'
-          />
-          <ProjectCard 
-            title='Dashboard' 
-            description='Simple dashboard design shows specific data'
-            image={ dashboardImage }
-            githubLink='https://github.com/wellserrano/dashboard'
-            siteLink='https://wellserrano.github.io/dashboard/'
+            githubLink='https://github.com/wellserrano/rocketMovies-app'
+            siteLink='https://app-rocket-movies.netlify.app'
           />
         </div>
 
