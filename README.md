@@ -10,7 +10,7 @@
 ## [](https://github.com/wellserrano/my-portfolio#objectives) Objectives  ✅
 
 -   Professional way to showcase my work
--   Increase  and online presence
+-   Increase online presence
 -   More information besides a resumé
 
 ## [](https://github.com/wellserrano/my-portfolio#deployment-)Deployment  📦
