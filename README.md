@@ -45,14 +45,14 @@ yarn@v1.22.10 or higher
 
 From your command line, first clone the portfolio:
 
-### Clone the repository
-$ git clone https://github.com/wellserrano/my-portfolio.git
+- ### Clone the repository
+```$ git clone https://github.com/wellserrano/my-portfolio.git```
 
-### Move into the repository
-$ cd my-portfolio
+- ### Move into the repository
+```$ cd my-portfolio```
 
-### Remove the current origin repository
-$ git remote remove origin
+- ### Remove the current origin repository
+```$ git remote remove origin```
 
 After that, you can install the dependencies either using NPM or Yarn.
 
