@@ -6,7 +6,6 @@
  - One Page Layout
  - Styled with TailwindCSS + Radix UI
  - Fully Responsive
- - Valid HTML5 & CSS3
 
 ## [](https://github.com/wellserrano/my-portfolio#objectives) Objectives  ✅
 
