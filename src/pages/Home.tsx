@@ -76,7 +76,7 @@ export function Home() {
 
       </main>
       <footer className='flex justify-center items-center text-center text-sm sm:text-base text-[#3D3D3D] dark:text-[#F1F2F4] font-normal mt-12'>
-        <p>Created with 💖 and ☕ by Me</p>
+        <p>Created with 🖤 and ☕ by Me</p>
       </footer>
     </div>
   )

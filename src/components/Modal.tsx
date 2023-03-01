@@ -6,6 +6,7 @@ interface ModalProps {
 }
 
 export function Modal({ title }: ModalProps) {
+
   return (
     <Dialog.Root>
 
@@ -25,44 +26,55 @@ export function Modal({ title }: ModalProps) {
             Send E-mail
           </Dialog.Title>
 
-          <fieldset className="mb-4 gap-5">
-            <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="flex h-9 w-full items-center justify-center rounded-md px-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
-              id="name"
-              required
-            />
-          </fieldset>
-          <fieldset className="mb-4 gap-5">
-            <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="flex h-9 w-full items-center justify-center rounded-md px-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
-              id="email"
-              required
-            />
-          </fieldset>
-          <fieldset className="mb-4 gap-5">
-            <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="message">
-              Message
-            </label>
-            <textarea
-              className="flex w-full min-h-[8rem] max-h-40 items-center justify-center rounded-md p-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
-              id="message"
-              required
-            />
-          </fieldset>
+          <form action="https://formsubmit.co/well.serrano@yahoo.com.br" method="POST">
 
-          <div className="flex justify-end mt-6">
-            <Dialog.Close asChild>
-              <button className="h-8 items-center justify-center rounded-sm px-4 text-white leading-none focus:shadow-[0_0_0_2px] focus:outline-none">
+            <fieldset className="mb-4 gap-5">
+              <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="name">
+                Name
+              </label>
+              <input
+                className="flex h-9 w-full items-center justify-center rounded-md px-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
+                type='text'
+                id="name"
+                name="name"
+                required
+              />
+            </fieldset>
+
+            <fieldset className="mb-4 gap-5">
+              <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="flex h-9 w-full items-center justify-center rounded-md px-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
+                type='email'
+                name='email'
+                id="email"
+                required
+              />
+            </fieldset>
+
+            <fieldset className="mb-4 gap-5">
+              <label className="dark:text-[#A3ABB2] text-[#575757] text-right text-base sm:text-lg" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                className="flex w-full min-h-[8rem] max-h-40 items-center justify-center rounded-md p-2 bg-[#D7D7D7] dark:bg-white text-base leading-none outline-none focus:shadow-[0_0_0_2px]"
+                id="message"
+                name="message"
+                required
+              />
+            </fieldset>
+
+            <div className="flex justify-end mt-6">
+              <button 
+                className="h-8 items-center justify-center rounded-sm px-4 text-white leading-none focus:shadow-[0_0_0_2px] focus:outline-none"
+                type='submit' 
+              >
                 Send
               </button>
-            </Dialog.Close>
-          </div>
+            </div>
+          </form>
           <Dialog.Close asChild>
             <button
               className="absolute flex top-[10px] right-[10px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
