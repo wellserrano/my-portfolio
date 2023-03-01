@@ -12,6 +12,7 @@
     "@radix-ui/react-aspect-ratio": "^1.0.1",
     "@radix-ui/react-avatar": "^1.0.1",
     "@radix-ui/react-collapsible": "^1.0.1",
+    "@radix-ui/react-dialog": "^1.0.2",
     "@radix-ui/react-toggle-group": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.4",
     "phosphor-react": "^1.4.1",

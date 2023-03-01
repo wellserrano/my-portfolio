@@ -12,6 +12,7 @@ import { LinkedinLogo, GithubLogo} from 'phosphor-react'
 import dashboardImage from '../assets/projects-images/dashboard.png'
 import soroblocoImage from '../assets/projects-images/sorobloco.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
+import { Modal } from '../components/Modal'
 
 export function Home() {
 
@@ -42,7 +43,7 @@ export function Home() {
       <main className='mt-10'>
         <div className="flex justify-center items-center gap-3 mb-12">
           <Button title='Check my CV' />
-          <Button title='Contact Me' />
+          <Modal title='Contact Me' />
         </div>
 
         <div className='flex justify-center items-center mb-8'>
