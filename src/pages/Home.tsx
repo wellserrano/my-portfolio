@@ -10,6 +10,8 @@ import { ThemeToggle } from "../components/ThemeToggle"
 import { LinkedinLogo, GithubLogo} from 'phosphor-react'
 
 import dashboardImage from '../assets/projects-images/dashboard.png'
+import soroblocoImage from '../assets/projects-images/sorobloco.png'
+import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
 
 export function Home() {
 
@@ -58,14 +60,14 @@ export function Home() {
           <ProjectCard 
             title='Sorobloco' 
             description='Display street carnival groups in Sorocaba'
-            image={ dashboardImage }
+            image={ soroblocoImage }
             githubLink='https://github.com/wellserrano/sorobloco'
             siteLink='https://sorobloco.netlify.app'
           />
           <ProjectCard 
             title='RocketMovies' 
             description='Platform dedicated to organize your favorite movies'
-            image={ dashboardImage }
+            image={ rocketmoviesImage }
             githubLink='https://github.com/wellserrano/rocketMovies-app'
             siteLink='https://app-rocket-movies.netlify.app'
           />
