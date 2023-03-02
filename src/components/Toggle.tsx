@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export function Toggle() {
   const [value, setValue] = useState('portfolio');
-  const toggleItemStyle = 'uppercase flex items-center justify-center w-36 h-12 sm:w-[22rem] sm:h-[4rem] rounded-[inherit] data-[state=on]:bg-[#D7D7D7] dark:data-[state=on]:bg-[#0C151D] text-[#19191B] dark:text-[#A3ABB2] focus:outline-none data-[state=on]:animate-popIn data-[state=off]:animate-popOut'
+  const toggleItemStyle = 'uppercase flex items-center justify-center w-36 h-12 sm:w-[22rem] sm:h-[4rem] rounded-[inherit] data-[state=on]:bg-[#D7D7D7] dark:data-[state=on]:bg-[#0C151D] text-[#19191B] dark:text-[#A3ABB2] focus:outline-none dark:data-[state=on]:animate-popIn dark:data-[state=off]:animate-popOut'
     
   return (
     <ToggleGroup.Root
