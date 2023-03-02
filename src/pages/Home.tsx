@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-
+import { Modal } from '../components/Modal'
 import { Avatar } from "../components/Avatar"
 import { Toggle } from "../components/Toggle"
 import { Button } from "../components/Button"
@@ -12,7 +11,7 @@ import { LinkedinLogo, GithubLogo} from 'phosphor-react'
 import dashboardImage from '../assets/projects-images/dashboard.png'
 import soroblocoImage from '../assets/projects-images/sorobloco.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
-import { Modal } from '../components/Modal'
+import pacmanImage from '../assets/projects-images/pacman.png'
 
 export function Home() {
 
@@ -71,6 +70,13 @@ export function Home() {
             image={ rocketmoviesImage }
             githubLink='https://github.com/wellserrano/rocketMovies-app'
             siteLink='https://app-rocket-movies.netlify.app'
+          />
+          <ProjectCard 
+            title='Pacman' 
+            description='Vanilla pacman implementation'
+            image={ pacmanImage }
+            githubLink='https://github.com/wellserrano/pacman'
+            siteLink='https://wellserrano.github.io/pacman/'
           />
         </div>
 
