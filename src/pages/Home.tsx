@@ -1,22 +1,23 @@
-import { Modal } from '../components/Modal'
 import { Avatar } from "../components/Avatar"
 import { Toggle } from "../components/Toggle"
 import { Button } from "../components/Button"
 import { TextBox } from "../components/TextBox"
+import { ModalCV } from "../components/ModalCV"
 import { ProjectCard } from "../components/ProjectCard"
 import { ThemeToggle } from "../components/ThemeToggle"
+import { ModalContact } from "../components/ModalContact"
 
 import { LinkedinLogo, GithubLogo} from 'phosphor-react'
 
+import pacmanImage from '../assets/projects-images/pacman.png'
 import dashboardImage from '../assets/projects-images/dashboard.png'
 import soroblocoImage from '../assets/projects-images/sorobloco.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
-import pacmanImage from '../assets/projects-images/pacman.png'
 
 export function Home() {
 
   return (
-    <div className="flex flex-col justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5] transition-colors ease-out">
+    <div className="flex flex-col min-h-screen justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5] transition-colors ease-out attach">
       
       <ThemeToggle />
 
@@ -41,8 +42,8 @@ export function Home() {
 
       <main className='mt-10'>
         <div className="flex justify-center items-center gap-3 mb-12">
-          <Button title='Check my CV' />
-          <Modal title='Contact Me' />
+          <ModalCV title='Check my CV' />
+          <ModalContact title='Contact Me' />
         </div>
 
         <div className='flex justify-center items-center mb-8'>
