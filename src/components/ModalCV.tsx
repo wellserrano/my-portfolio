@@ -37,9 +37,9 @@ export function ModalCV({ title }: ModalProps) {
 
       <Dialog.Portal>
         
-        <Dialog.Overlay className="bg-black opacity-90 data-[state=open]:transition-opacity fixed inset-0" />
+        <Dialog.Overlay className="bg-black opacity-75 data-[state=open]:transition-opacity fixed inset-0" />
 
-        <Dialog.Content className=" w-96 h-fit text-white data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white dark:bg-[#0C151D] p-10 focus:outline-none">
+        <Dialog.Content className=" w-96 h-fit text-[#3D3D3D] dark:text-[#F1F2F4] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white dark:bg-[#0C151D] p-10 focus:outline-none">
           <p className='mb-6 text-lg font-bold'>Versions:</p>
           <div className='flex flex-col ml-4 justify-start items-start gap-2 italic'>
             <a href={ englishCV } target='_blank' className='hover:opacity-80 transition-opacity'>English</a>
