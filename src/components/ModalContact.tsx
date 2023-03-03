@@ -5,7 +5,7 @@ interface ModalProps {
   title: string
 }
 
-export function Modal({ title }: ModalProps) {
+export function ModalContact({ title }: ModalProps) {
 
   return (
     <Dialog.Root>
