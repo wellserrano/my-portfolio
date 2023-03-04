@@ -5,6 +5,7 @@ import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { Browser, GithubLogo } from 'phosphor-react'
 
 import { useState } from 'react';
+import { Tag } from './Tag';
 
 interface Props {
   title: string
@@ -12,9 +13,10 @@ interface Props {
   image: string
   githubLink: string
   siteLink: string
+  tags?: string[]
 }
 
-export function ProjectCard({ title, description, image, githubLink, siteLink }: Props) {
+export function ProjectCard({ title, description, image, githubLink, siteLink, tags }: Props) {
   const [open, setOpen] = useState(true);
 
   const tooltipStyle = 'text-[#3D3D3D] select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
@@ -41,6 +43,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink }:
       >
         <div className='flex flex-col items-start px-4 pt-2 gap-2'>
           <h2 className='text-[#3D3D3D] dark:text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
+          <Tag text={ tags } />
           <p className='text-[#575757] dark:text-[#A3ABB2] text-sm'>{ description }</p>
         </div>
 
