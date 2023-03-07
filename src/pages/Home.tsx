@@ -57,7 +57,6 @@ export function Home() {
             image={ dashboardImage }
             githubLink='https://github.com/wellserrano/dashboard'
             siteLink='https://wellserrano.github.io/dashboard/'
-            tags={['teste']}
           />
           <ProjectCard 
             title='Sorobloco' 

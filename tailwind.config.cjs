@@ -19,6 +19,7 @@ module.exports = {
         'popIn': 'popIn 300ms ease-out',
         'smallEnhance': 'smallEnhance 300ms ease-out forwards',
         'contentShow': 'contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'pill': 'fitPill 300ms ease-out forwards',
       },
       keyframes: {
         slideDown: {
@@ -44,6 +45,10 @@ module.exports = {
         contentShow: {
           '0%': { opacity: 0, transform: 'translate(-50%, -48%) scale(0.80)' },
           '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
+        },
+        fitPill: {
+          '0%': { width: '0.5rem' },
+          '100%': { width: 'fit-content' },
         }
       }
     },

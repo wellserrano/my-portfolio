@@ -5,7 +5,7 @@ import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { Browser, GithubLogo } from 'phosphor-react'
 
 import { useState } from 'react';
-import { Tag } from './Tag';
+// import { Tag } from './Tag';
 
 interface Props {
   title: string
@@ -23,7 +23,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
 
   return (
     <Collapsible.Root
-      className="w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] hover:scale-105 transition-transform"
+      className="group w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] hover:scale-105 transition-transform"
       open={ open }
       onOpenChange={ setOpen }
     >
@@ -43,7 +43,10 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
       >
         <div className='flex flex-col items-start px-4 pt-2 gap-2'>
           <h2 className='text-[#3D3D3D] dark:text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
-          <Tag text={ tags } />
+          {/* {
+            tags && 
+            tags.map(tag => <Tag text={ tag } />)
+          } */}
           <p className='text-[#575757] dark:text-[#A3ABB2] text-sm'>{ description }</p>
         </div>
 
