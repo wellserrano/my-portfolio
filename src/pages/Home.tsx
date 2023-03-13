@@ -26,7 +26,7 @@ export function Home() {
           <Avatar />
           <div className="flex flex-col sm:gap-2 text-center sm:text-left">
             <h1 className="dark:text-[#F1F2F4] text-[#3D3D3D] text-2xl sm:text-5xl">Wellington Serrano</h1>
-            <p className="dark:text-[#A3ABB2] text-[#575757] text-lg sm:text-2xl mb-2">Software Developer</p>
+            <p className="dark:text-[#A3ABB2] text-[#575757] text-lg sm:text-2xl mb-2">Software/Web Developer</p>
             <div className="flex gap-12 justify-center items-center">
               <a href="https://www.linkedin.com/in/wellserrano/" target='_blank'><LinkedinLogo weight='fill' className='dark:text-[#A3ABB2] text-#575757 text-4xl sm:text-5xl'/></a>
               <a href="https://github.com/wellserrano" target='_blank'><GithubLogo weight='fill' className='dark:text-[#A3ABB2] text-#575757 text-4xl sm:text-5xl'/> </a>
