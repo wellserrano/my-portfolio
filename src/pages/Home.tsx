@@ -34,8 +34,8 @@ export function Home() {
             <h1 className="dark:text-[#F1F2F4] text-[#3D3D3D] text-2xl sm:text-5xl">Wellington Serrano</h1>
             <p className="dark:text-[#A3ABB2] text-[#575757] text-lg sm:text-2xl mb-2">Software/Web Developer</p>
             <div className="flex gap-12 justify-center items-center">
-              <a href="https://www.linkedin.com/in/wellserrano/" target='_blank'><LinkedinLogo weight='fill' className='dark:text-[#A3ABB2] text-#575757 text-4xl sm:text-5xl'/></a>
-              <a href="https://github.com/wellserrano" target='_blank'><GithubLogo weight='fill' className='dark:text-[#A3ABB2] text-#575757 text-4xl sm:text-5xl'/> </a>
+              <a href="https://www.linkedin.com/in/wellserrano/" target='_blank'><LinkedinLogo weight='fill' className='dark:text-[#A3ABB2] text-[#15212c] text-4xl sm:text-5xl'/></a>
+              <a href="https://github.com/wellserrano" target='_blank'><GithubLogo weight='fill' className='dark:text-[#A3ABB2] text-[#15212c] text-4xl sm:text-5xl'/> </a>
             </div>
           </div>
         </div>
@@ -94,11 +94,11 @@ export function Home() {
           : 
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center justify-center items-center gap-8">
-              <div className="w-96 text-start">
+              <div className="w-96 text-justify">
                 <p className="text-lg leading-relaxed text-[#3D3D3D] dark:text-[#F1F2F4]">
                   I am <strong>Wellington Serrano</strong>, a professional web developer with over 3 years of experience in creating dynamic and responsive web/desktop applications.
                   My portfolio website showcases my expertise in crafting user-friendly and visually appealing web solutions that cater to a wide range of industries and target audiences.
-                  I have honed my skills in <strong className="italic">HTML, CSS, JavaScript, TypeScript</strong> and various web frameworks, tools and technologies such as <strong className="text-lg text-[#FFE071]">React, NextJS, React Native, Expo</strong> and <strong className="text-[#FFE071]">NodeJS</strong>. 
+                  I have honed my skills in <strong className="italic">HTML, CSS, JavaScript, TypeScript</strong> and various web frameworks, tools and technologies such as <strong className="text-lg text-emerald-700 dark:text-[#FFE071]" >React, NextJS, React Native, Expo</strong> and <strong className="text-emerald-700 dark:text-[#FFE071]">NodeJS</strong>. 
                   <br /><br />I am a problem-solver at heart, who enjoys tackling complex challenges to develop innovative and creative solutions that drive business growth and success.
                   <br /><br />&there4; Committed to delivering high-quality work that meets the unique needs and requirements of my clients. 
                   <br /><br />&there4; Keen eye for detail and strive to exceed expectations. 
