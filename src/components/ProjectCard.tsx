@@ -23,7 +23,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
 
   return (
     <Collapsible.Root
-      className="group w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] hover:scale-105 transition-transform"
+      className="group w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] sm:hover:scale-105 transition-transform"
       open={ open }
       onOpenChange={ setOpen }
     >
@@ -31,7 +31,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
       <Collapsible.Trigger asChild >
         <AspectRatio.Root ratio={16 / 9}>
           <img
-            className="h-full w-full object-cover blur-sm grayscale-[0.75] hover:grayscale-0 hover:blur-none transition-blur ease-linear"
+            className="h-full w-full object-cover sm:blur-sm sm:grayscale-[0.75] sm:hover:grayscale-0 sm:hover:blur-none transition-blur ease-linear"
             src={ image }
             alt="webpage image"
           />
