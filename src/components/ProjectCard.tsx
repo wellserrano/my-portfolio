@@ -17,7 +17,7 @@ interface Props {
 }
 
 export function ProjectCard({ title, description, image, githubLink, siteLink, tags }: Props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const tooltipStyle = 'text-[#3D3D3D] select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
 
@@ -25,7 +25,8 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
     <Collapsible.Root
       className="group w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] sm:hover:scale-105 transition-transform"
       open={ open }
-      onOpenChange={ setOpen }
+      onMouseOver={() => setOpen(true) }
+      onMouseLeave={() => setTimeout(() => setOpen(false), 500) }
     >
 
       <Collapsible.Trigger asChild >
