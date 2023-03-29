@@ -43,7 +43,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
         className='overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp'
       >
         <div className='flex flex-col items-start px-4 pt-2 gap-2'>
-          <h2 className='text-[#3D3D3D] dark:text-[#F1F2F4] opacity-95 text-xl'>{ title }</h2>
+          <h2 className='text-[#3A3A3A] dark:text-[#C3C7CB] opacity-95 text-xl'>{ title }</h2>
           {/* {
             tags && 
             tags.map(tag => <Tag text={ tag } />)
