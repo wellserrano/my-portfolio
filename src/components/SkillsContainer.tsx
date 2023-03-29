@@ -42,7 +42,7 @@ export function SkillsContainer() {
 
           <Collapsible.Root open={languageOpen} onOpenChange={setLanguageOpen}>
           <Collapsible.Trigger asChild>
-            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-white mb-6 cursor-pointer hover:opacity-75'>
+            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-[#3D3D3D] dark:text-white mt-8 mb-1  cursor-pointer hover:opacity-75'>
               {languageOpen ? <CaretUp /> : <CaretDown />} Programming Languages 
             </p>
           </Collapsible.Trigger>
@@ -57,7 +57,7 @@ export function SkillsContainer() {
 
           <Collapsible.Root open={frameworkOpen} onOpenChange={setFrameworkOpen}>
           <Collapsible.Trigger asChild>
-            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-white mb-6 cursor-pointer hover:opacity-75'>
+            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-[#3D3D3D] dark:text-white mt-8 mb-1  cursor-pointer hover:opacity-75'>
               {frameworkOpen ? <CaretUp /> : <CaretDown />} Frameworks 
             </p>
           </Collapsible.Trigger>
@@ -70,7 +70,7 @@ export function SkillsContainer() {
 
           <Collapsible.Root open={librarieOpen} onOpenChange={setLibrarieOpen}>
           <Collapsible.Trigger asChild>
-            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-white mb-6 cursor-pointer hover:opacity-75'>
+            <p className='flex flex-row justify-end items-center gap-2 text-xl font-bold text-[#3D3D3D] dark:text-white mt-8 mb-1  cursor-pointer hover:opacity-75'>
               {librarieOpen ? <CaretUp /> : <CaretDown />} Libraries 
             </p>
           </Collapsible.Trigger>
