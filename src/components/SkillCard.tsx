@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 interface SkillCardProps {
   skill: string
   level: number
-  image: string
+  icon: React.FC<React.SVGProps<SVGSVGElement>>
 }
 
-export function SkillCard({ skill, level, image }: SkillCardProps) {
+export function SkillCard({ skill, level, icon:Icon }: SkillCardProps) {
   const [progressValue, setProgressValue] = useState<number>(0);
   
   useEffect(() => {
@@ -17,12 +17,14 @@ export function SkillCard({ skill, level, image }: SkillCardProps) {
 
   return (
     <div className='flex flex-row justify-center items-center mb-6'>
-      <img src={ image } alt="skill logo" className='h-8 mr-4'/>
+      <div className='mr-6'>
+        <Icon height={36} width={36}/>
+      </div>
 
       <div>
         <h2 className='dark:text-[#FFE071] font-bold mb-2'>{skill}</h2>
         <Progress.Root
-          className="relative overflow-hidden bg-slate-700 rounded-full w-[300px] h-4"
+          className="relative overflow-hidden bg-slate-700 rounded-full w-60 h-4"
           value={ level }
         >
           <Progress.Indicator
