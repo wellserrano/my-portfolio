@@ -1,9 +1,17 @@
 import pacmanImage from '../assets/projects-images/pacman.png'
 import dashboardImage from '../assets/projects-images/dashboard.png'
 import soroblocoImage from '../assets/projects-images/sorobloco.png'
+import creditcardImage from '../assets/projects-images/creditcard.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
 
 export const projectsData = [
+  {
+    title: 'Credit Card',
+    description: 'Credit card registration component',
+    image: creditcardImage,
+    githubLink: 'https://github.com/wellserrano/creditcard',
+    siteLink: 'https://wellserrano.github.io/creditcard/',
+  },
   {
     title: 'Dashboard',
     description: 'Simple dashboard design shows specific data',
