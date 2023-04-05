@@ -1,17 +1,23 @@
 import * as Dialog from '@radix-ui/react-dialog';
+import { DialogProps } from '@radix-ui/react-dialog';
 import { X } from 'phosphor-react'
+import { ButtonHTMLAttributes, useRef } from 'react';
 
-interface ModalProps {
+interface ModalProps extends ButtonHTMLAttributes<HTMLButtonElement>, DialogProps {
   title: string
 }
 
-export function ModalContact({ title }: ModalProps) {
+export function ModalContact({ title, ...rest }: ) {
+  const dialogRef = useRef()
 
   return (
-    <Dialog.Root>
+    <Dialog.Root {...rest}>
 
       <Dialog.Trigger asChild>
-        <button className="flex justify-center items-center gap-2 w-36 h-11 sm:w-72 sm:h-20 bg-emerald-500 dark:bg-[#FFE071] text-[#12202c] dark:text-[#3d3d3d] text-sm sm:text-2xl rounded-xl hover:opacity-90 transition-opacity">
+        <button 
+          className="flex justify-center items-center gap-2 w-36 h-11 sm:w-72 sm:h-20 bg-emerald-500 dark:bg-[#FFE071] text-[#12202c] dark:text-[#3d3d3d] text-sm sm:text-2xl rounded-xl hover:opacity-90 transition-opacity"
+          {...rest}
+        >
           { title }
         </button>
       </Dialog.Trigger>

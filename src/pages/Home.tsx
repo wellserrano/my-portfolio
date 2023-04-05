@@ -7,16 +7,27 @@ import { ModalContact } from "../components/ModalContact"
 import { SkillsContainer } from "../components/SkillsContainer"
 import { ProjectsContainer } from "../components/ProjectsContainer"
 
-import { LinkedinLogo, GithubLogo} from 'phosphor-react'
+import * as Toast from '@radix-ui/react-toast'
+import { LinkedinLogo, GithubLogo } from 'phosphor-react'
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function Home() {
   const [toggleValue, setToggleValue] = useState<string>('portfolio')
+  const [showToast, setShowToast] = useState<boolean>(false)
+
+  const toastDialogRef = useRef(null)
 
   function handleToggle(e:string) {
     setToggleValue(e)
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowToast(true)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="flex flex-col min-h-screen justify-center items-center pt-5 px-5 pb-10 dark:bg-[#0C151D] bg-[#E5E5E5] transition-colors ease-out attach">
@@ -41,25 +52,52 @@ export function Home() {
           <TextBox amount='2' subject='Currently developing' />
         </div>
       </header>
+      <Toast.Provider swipeDirection="right">
+        <main className='mt-10'>
 
-      <main className='mt-10'>
-        <div className="flex justify-center items-center gap-3 mb-12">
-          <ModalCV title='Check my CV' />
-          <ModalContact title='Contact Me' />
-        </div>
+          <div className="flex justify-center items-center gap-3 mb-12">
+            <ModalCV title='Check my CV' />
+            <ModalContact title='Contact Me' />
+          </div>
 
-        <div className='flex justify-center items-center mb-8'>
-          <Toggle activeSection={ toggleValue } handleToggle={ handleToggle }/>
-        </div>
+          <div className='flex justify-center items-center mb-8'>
+            <Toggle activeSection={ toggleValue } handleToggle={ handleToggle }/>
+          </div>
 
-        {
-          toggleValue === 'portfolio'
-          ? <ProjectsContainer />
-          : <SkillsContainer />
-        }
-        
+          {
+            toggleValue === 'portfolio'
+            ? <ProjectsContainer />
+            : <SkillsContainer />
+          }
 
-      </main>
+        </main>
+        <Toast.Root
+          className="bg-[#171F26] rounded-md shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] p-4 grid [grid-template-areas:_'title_action'_'description_action'] grid-cols-[auto_max-content] gap-x-4 items-center data-[state=open]:animate-slideIn data-[state=closed]:animate-hide data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-swipeOut"
+          open={showToast}
+          onOpenChange={setShowToast}
+        >
+
+          <Toast.Title className="[grid-area:_title] mb-[5px] font-medium text-[#A3ABB2] text-base">
+            Hey! 
+          </Toast.Title>
+          <Toast.Description asChild className="text-[#A3ABB2] text-sm">
+            <p>Have you found anything strange or willing to be improved on these projects? 
+              Be welcome to contact me or create an issue on its github project
+              😉
+            </p>
+          </Toast.Description>
+          <Toast.Action className="[grid-area:_action] bg-[#FDE072] p-2 rounded hover:opacity-80 transition-all" asChild altText='pops contact message'>
+            <ModalContact title='Contact' />
+          </Toast.Action>
+
+        </Toast.Root>
+
+        <Toast.Viewport className="[--viewport-padding:_25px] 
+        fixed bottom-0 right-0 flex flex-col p-[var(--viewport-padding)] 
+        gap-[10px] w-96 max-w-[100vw] m-0 list-none z-[2147483647] outline-none" 
+        />
+      </Toast.Provider>
+
       <footer className='flex justify-center items-center text-center text-sm sm:text-base text-[#3D3D3D] dark:text-[#F1F2F4] font-normal mt-12'>
         <p>Created with 🖤 and ☕ by Me</p>
       </footer>
