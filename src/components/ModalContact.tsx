@@ -7,7 +7,7 @@ interface ModalProps extends ButtonHTMLAttributes<HTMLButtonElement>, DialogProp
   title: string
 }
 
-export function ModalContact({ title, ...rest }: ) {
+export function ModalContact({ title, ...rest }: ModalProps) {
   const dialogRef = useRef()
 
   return (

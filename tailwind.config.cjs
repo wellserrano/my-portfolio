@@ -20,6 +20,9 @@ module.exports = {
         'smallEnhance': 'smallEnhance 300ms ease-out forwards',
         'contentShow': 'contentShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         'pill': 'fitPill 300ms ease-out forwards',
+        'hide': 'hide 100ms ease-in',
+        'slideIn': 'slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'swipeOut': 'swipeOut 100ms ease-out',
       },
       keyframes: {
         slideDown: {
@@ -49,7 +52,19 @@ module.exports = {
         fitPill: {
           '0%': { width: '0.5rem' },
           '100%': { width: 'fit-content' },
-        }
+        },
+        hide: {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+        slideIn: {
+          from: { transform: 'translateX(calc(100% + var(--viewport-padding)))' },
+          to: { transform: 'translateX(0))' },
+        },
+        swipeOut: {
+          from: { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
+          to: { transform: 'translateX(calc(100% + var(--viewport-padding)))' },
+        },
       }
     },
   },

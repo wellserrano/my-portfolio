@@ -32,7 +32,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
       <Collapsible.Trigger asChild >
         <AspectRatio.Root ratio={16 / 9}>
           <img
-            className="h-full w-full object-cover sm:blur-sm sm:grayscale-[0.75] sm:hover:grayscale-0 sm:hover:blur-none transition-blur ease-linear"
+            className="h-full w-full object-cover sm:grayscale-[0.75] sm:hover:grayscale-0 transition-blur ease-linear"
             src={ image }
             alt="webpage image"
           />
