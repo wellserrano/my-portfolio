@@ -17,16 +17,16 @@ interface Props {
 }
 
 export function ProjectCard({ title, description, image, githubLink, siteLink, tags }: Props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const tooltipStyle = 'text-[#3D3D3D] select-none rounded-md bg-white px-4 py-2 text-base leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]'
 
   return (
     <Collapsible.Root
-      className="group w-72 sm:w-80 overflow-hidden rounded-md shadow-[0_2px_10px] sm:hover:scale-105 transition-transform"
+      className="group w-72 sm:w-80 sm:min-h-full overflow-hidden rounded-md shadow-[0_2px_10px] sm:hover:scale-105 transition-transform"
       open={ open }
-      onMouseOver={() => setOpen(true) }
-      onMouseLeave={() => setTimeout(() => setOpen(false), 500) }
+      // onMouseOver={() => setOpen(true) }
+      // onMouseLeave={() => setTimeout(() => setOpen(false), 500) }
     >
 
       <Collapsible.Trigger asChild >
@@ -40,7 +40,7 @@ export function ProjectCard({ title, description, image, githubLink, siteLink, t
       </Collapsible.Trigger>
 
       <Collapsible.Content 
-        className='overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp'
+        className='relative flex w-full flex-col justify-between overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp'
       >
         <div className='flex flex-col items-start px-4 pt-2 gap-2'>
           <h2 className='text-[#3A3A3A] dark:text-[#C3C7CB] opacity-95 text-xl'>{ title }</h2>
