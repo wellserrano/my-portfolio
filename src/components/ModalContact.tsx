@@ -1,20 +1,19 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { DialogProps } from '@radix-ui/react-dialog';
 import { X } from 'phosphor-react'
-import { ButtonHTMLAttributes, useRef } from 'react';
+import { useRef, forwardRef } from 'react';
 
-interface ModalProps extends ButtonHTMLAttributes<HTMLButtonElement>, DialogProps {
+interface ModalProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string
 }
 
-export function ModalContact({ title, ...rest }: ModalProps) {
-  const dialogRef = useRef()
-
-  return (
+export const ModalContact = forwardRef<HTMLButtonElement, ModalProps>(
+  ({ title, ...rest }, ref) => (
     <Dialog.Root {...rest}>
 
       <Dialog.Trigger asChild>
         <button 
+          ref={ref}
           className="flex justify-center items-center gap-2 w-36 h-11 sm:w-72 sm:h-20 bg-emerald-500 dark:bg-[#FFE071] text-[#12202c] dark:text-[#3d3d3d] text-sm sm:text-2xl rounded-xl hover:opacity-90 transition-opacity"
           {...rest}
         >
@@ -93,4 +92,4 @@ export function ModalContact({ title, ...rest }: ModalProps) {
       </Dialog.Portal>
     </Dialog.Root>
   )
-}
+)

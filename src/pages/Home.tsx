@@ -16,7 +16,7 @@ export function Home() {
   const [toggleValue, setToggleValue] = useState<string>('portfolio')
   const [showToast, setShowToast] = useState<boolean>(false)
 
-  const toastDialogRef = useRef(null)
+  const toastDialogRef = useRef<HTMLButtonElement | null>(null)
 
   function handleToggle(e:string) {
     setToggleValue(e)
@@ -57,7 +57,7 @@ export function Home() {
 
           <div className="flex justify-center items-center gap-3 mb-12">
             <ModalCV title='Check my CV' />
-            <ModalContact title='Contact Me' />
+            <ModalContact ref={toastDialogRef} title='Contact Me' />
           </div>
 
           <div className='flex justify-center items-center mb-8'>
@@ -87,7 +87,11 @@ export function Home() {
             </p>
           </Toast.Description>
           <Toast.Action className="[grid-area:_action] bg-[#FDE072] p-2 rounded hover:opacity-80 transition-all" asChild altText='pops contact message'>
-            <ModalContact title='Contact' />
+            <button onClick={() => {
+              toastDialogRef.current?.click()
+            } }>
+                Contact
+            </button>
           </Toast.Action>
 
         </Toast.Root>
