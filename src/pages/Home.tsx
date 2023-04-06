@@ -25,7 +25,7 @@ export function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowToast(true)
-    }, 3000)
+    }, 15000)
     return () => clearTimeout(timer)
   }, [])
 
@@ -72,21 +72,21 @@ export function Home() {
 
         </main>
         <Toast.Root
-          className="bg-[#171F26] rounded-md shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] p-4 grid [grid-template-areas:_'title_action'_'description_action'] grid-cols-[auto_max-content] gap-x-4 items-center data-[state=open]:animate-slideIn data-[state=closed]:animate-hide data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-swipeOut"
+          className="bg-[#D7D7D7] dark:bg-[#171F26] rounded-md shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] p-4 grid [grid-template-areas:_'title_action'_'description_action'] grid-cols-[auto_max-content] gap-x-4 items-center data-[state=open]:animate-slideIn data-[state=closed]:animate-hide data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-swipeOut"
           open={showToast}
           onOpenChange={setShowToast}
         >
 
-          <Toast.Title className="[grid-area:_title] mb-[5px] font-medium text-[#A3ABB2] text-base">
+          <Toast.Title className="[grid-area:_title] mb-[5px] font-medium text-[#19191B] dark:text-[#A3ABB2] text-base">
             Hey! 
           </Toast.Title>
-          <Toast.Description asChild className="text-[#A3ABB2] text-sm">
+          <Toast.Description asChild className="text-[#19191B] dark:text-[#A3ABB2] text-sm">
             <p>Have you found anything strange or willing to be improved on these projects? 
               Be welcome to contact me or create an issue on its github project
               😉
             </p>
           </Toast.Description>
-          <Toast.Action className="[grid-area:_action] bg-[#FDE072] p-2 rounded hover:opacity-80 transition-all" asChild altText='pops contact message'>
+          <Toast.Action className="[grid-area:_action] bg-emerald-500 dark:bg-[#FDE072] p-2 rounded hover:opacity-80 transition-all" asChild altText='pops contact message'>
             <button onClick={() => {
               toastDialogRef.current?.click()
             } }>
