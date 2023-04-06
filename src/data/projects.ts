@@ -7,7 +7,7 @@ import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
 export const projectsData = [
   {
     title: 'Credit Card',
-    description: 'Credit card registration component',
+    description: 'Credit card registration component design',
     image: creditcardImage,
     githubLink: 'https://github.com/wellserrano/creditcard',
     siteLink: 'https://wellserrano.github.io/creditcard/',
