@@ -3,8 +3,16 @@ import dashboardImage from '../assets/projects-images/dashboard.png'
 import soroblocoImage from '../assets/projects-images/sorobloco.png'
 import creditcardImage from '../assets/projects-images/creditcard.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
+import gol from '../assets/projects-images/golconway.png'
 
 export const projectsData = [
+  {
+    title: "Conway's Game of Life",
+    description: "Observe John Conway's Game of life on a simple and beautiful grid",
+    image: gol,
+    githubLink: 'https://github.com/wellserrano/conwaysgol',
+    siteLink: 'https://golconway.netlify.app/',
+  },
   {
     title: 'Credit Card',
     description: 'Credit card registration component design',
