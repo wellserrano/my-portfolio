@@ -5,7 +5,7 @@ import creditcardImage from '../assets/projects-images/creditcard.png'
 import rocketmoviesImage from '../assets/projects-images/rocketmovies.png'
 import gol from '../assets/projects-images/golconway.png'
 
-export const projectsData = [
+const projectsData = [
   {
     title: "Conway's Game of Life",
     description: "Observe John Conway's Game of life on a simple and beautiful grid",
@@ -49,3 +49,5 @@ export const projectsData = [
     siteLink: 'https://wellserrano.github.io/pacman/',
   },
 ]
+
+export default projectsData

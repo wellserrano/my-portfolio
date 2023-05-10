@@ -1,5 +1,5 @@
 import { ProjectCard } from "./ProjectCard"
-import { projectsData } from '../data/projects'
+import projectsData from '../data/projects'
 
 export function ProjectsContainer() {
   return (
