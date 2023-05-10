@@ -12,6 +12,8 @@ import { LinkedinLogo, GithubLogo } from 'phosphor-react'
 
 import { useEffect, useRef, useState } from "react"
 
+import projects from '../data/projects'
+
 export function Home() {
   const [toggleValue, setToggleValue] = useState<string>('portfolio')
   const [showToast, setShowToast] = useState<boolean>(false)
@@ -21,6 +23,8 @@ export function Home() {
   function handleToggle(e:string) {
     setToggleValue(e)
   }
+
+  const numberOfProjects = projects.length
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -41,15 +45,15 @@ export function Home() {
             <h1 className="dark:text-[#F1F2F4] text-[#3D3D3D] text-2xl sm:text-5xl">Wellington Serrano</h1>
             <p className="dark:text-[#A3ABB2] text-[#575757] text-lg sm:text-2xl mb-2">Software/Web Developer</p>
             <div className="flex gap-12 justify-center items-center">
-              <a href="https://www.linkedin.com/in/wellserrano/" target='_blank'><LinkedinLogo weight='fill' className='dark:text-[#A3ABB2] text-[#15212c] text-4xl sm:text-5xl'/></a>
-              <a href="https://github.com/wellserrano" target='_blank'><GithubLogo weight='fill' className='dark:text-[#A3ABB2] text-[#15212c] text-4xl sm:text-5xl'/> </a>
+              <a className='' href="https://www.linkedin.com/in/wellserrano/" target='_blank'><LinkedinLogo weight='fill' className='dark:text-[#A3ABB2]/90 text-[#15212c]/90 text-4xl sm:text-5xl dark:hover:text-[#A3ABB2] hover:text-[#15212c] hover:scale-105 transition-all'/></a>
+              <a className='' href="https://github.com/wellserrano" target='_blank'><GithubLogo weight='fill' className='dark:text-[#A3ABB2]/90 text-[#15212c]/90 text-4xl sm:text-5xl dark:hover:text-[#A3ABB2] hover:text-[#15212c] hover:scale-105 transition-all'/> </a>
             </div>
           </div>
         </div>
         <div className="flex mt-8 gap-6 sm:gap-20">
-          <TextBox amount='3' subject='Years of Experience' />
-          <TextBox amount='+10' subject='Completed Projects'  />
-          <TextBox amount='2' subject='Currently developing' />
+          <TextBox amount={4} subject='Years of Experience' />
+          <TextBox amount={numberOfProjects} subject='Completed Projects'  />
+          <TextBox amount={3} subject='Currently developing' />
         </div>
       </header>
       <Toast.Provider swipeDirection="right">
